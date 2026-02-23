@@ -253,10 +253,10 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
    ══════════════════════════════════════════════════════════ */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: flex-end;
-  padding: 0 0 120px;
+  padding: 0 0 80px;
   overflow: hidden;
 }
 
@@ -264,9 +264,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.6) 70%, rgba(10,10,10,0.85) 100%),
-    linear-gradient(135deg, #1a2a1a 0%, #2a3a2a 30%, #3a4a3a 60%, #2a3a2a 100%);
-  background-size: cover;
+    linear-gradient(180deg, rgba(10,10,10,0.15) 0%, rgba(10,10,10,0.45) 60%, rgba(10,10,10,0.85) 100%),
+    url('hero-bg.png') center 30% / cover no-repeat;
 }
 
 /* Simulated camera-feed noise texture */
@@ -280,21 +279,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   pointer-events: none;
 }
 
-/* Simulated landscape elements */
+/* Reserved for hero bg overlay */
 .hero__bg::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 45%;
-  background: linear-gradient(180deg,
-    transparent 0%,
-    rgba(60, 80, 50, 0.3) 20%,
-    rgba(80, 100, 60, 0.2) 40%,
-    rgba(40, 50, 35, 0.4) 100%
-  );
-  pointer-events: none;
+  display: none;
 }
 
 /* HUD Overlay */
@@ -340,16 +327,16 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 /* Detection bounding box */
 .hero__detection {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   z-index: 3;
   pointer-events: none;
 }
 
 .hero__detection-box {
-  width: 180px;
-  height: 200px;
+  width: 220px;
+  height: 160px;
   border: 2.5px solid var(--c-red);
   border-radius: 3px;
   position: relative;
@@ -696,9 +683,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
    ══════════════════════════════════════════════════════════ */
 .tech {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 50px;
+  align-items: start;
 }
 
 .tech__features {
@@ -814,14 +801,14 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 /* Network map visualization */
 .tech__visual {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding-top: 110px;
 }
 
 .netmap {
   position: relative;
   width: 100%;
-  max-width: 560px;
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.08);
   overflow: hidden;
@@ -1256,8 +1243,9 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .threats { grid-template-columns: 1fr; gap: 12px; }
   .industries { grid-template-columns: repeat(3, 1fr); }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 30px; }
-  .tech { grid-template-columns: 1fr; gap: 50px; }
-  .tech__visual { order: -1; }
+  .tech { grid-template-columns: 1fr; gap: 40px; }
+  .tech__visual { order: -1; padding-top: 0; }
+  .netmap { max-width: 640px; margin: 0 auto; }
   .about { grid-template-columns: 1fr; gap: 40px; }
   .cta { grid-template-columns: 1fr; gap: 40px; }
   .process { flex-direction: column; gap: 32px; }
