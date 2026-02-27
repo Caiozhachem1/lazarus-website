@@ -819,7 +819,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.35) saturate(0.6) contrast(1.1);
+  filter: brightness(0.45) saturate(0.7) contrast(1.05);
   position: absolute;
   inset: 0;
 }
@@ -1026,7 +1026,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
    ══════════════════════════════════════════════════════════ */
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   text-align: center;
 }
@@ -1089,20 +1089,23 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .about__grid-item {
   border-radius: 12px;
   min-height: 150px;
+  background-size: cover;
+  background-position: center;
 }
 
 .about__grid-item--1 {
   grid-row: 1 / 3;
-  background: linear-gradient(135deg, #1a3c2a 0%, #0d2018 100%);
+  background-image: url('about-2.png');
   min-height: 312px;
 }
 
 .about__grid-item--2 {
-  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  background-image: url('about-1.png');
+  background-position: center top;
 }
 
 .about__grid-item--3 {
-  background: linear-gradient(135deg, #3a4a3a 0%, #1a2a1a 100%);
+  background-image: url('about-3.png');
 }
 
 
