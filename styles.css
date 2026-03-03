@@ -327,8 +327,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 /* Detection bounding box */
 .hero__detection {
   position: absolute;
-  top: 45%;
-  left: 50%;
+  top: 50%;
+  left: 55%;
   transform: translate(-50%, -50%);
   z-index: 3;
   pointer-events: none;
@@ -803,7 +803,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 110px;
+  padding-top: 140px;
 }
 
 .netmap {
@@ -1059,16 +1059,17 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
    ══════════════════════════════════════════════════════════ */
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: center;
+  max-width: 800px;
 }
 
 .about__desc {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 1.8;
   color: var(--c-gray-2);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .about__visual {
