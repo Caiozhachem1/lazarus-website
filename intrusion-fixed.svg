@@ -2,6 +2,35 @@
 <g clip-path="url(#clip0_676_589)">
 <rect width="1337" height="837" fill="#141414"/>
 <path d="M626.5 -3L486 841H868L728 -3H626.5Z" fill="#171717" stroke="#7B7575" stroke-width="2"/>
+<!-- Animated road marks traveling down for motion effect -->
+<rect fill="#7B7575" rx="1" opacity="0">
+  <animate attributeName="x" values="675.5;674" dur="3.5s" repeatCount="indefinite"/>
+  <animate attributeName="y" values="-25;840" dur="3.5s" repeatCount="indefinite"/>
+  <animate attributeName="width" values="1.5;6" dur="3.5s" repeatCount="indefinite"/>
+  <animate attributeName="height" values="6;26" dur="3.5s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0.5;0.6;0" keyTimes="0;0.1;0.85;1" dur="3.5s" repeatCount="indefinite"/>
+</rect>
+<rect fill="#7B7575" rx="1" opacity="0">
+  <animate attributeName="x" values="675.5;674" dur="3.5s" begin="0.875s" repeatCount="indefinite"/>
+  <animate attributeName="y" values="-25;840" dur="3.5s" begin="0.875s" repeatCount="indefinite"/>
+  <animate attributeName="width" values="1.5;6" dur="3.5s" begin="0.875s" repeatCount="indefinite"/>
+  <animate attributeName="height" values="6;26" dur="3.5s" begin="0.875s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0.5;0.6;0" keyTimes="0;0.1;0.85;1" dur="3.5s" begin="0.875s" repeatCount="indefinite"/>
+</rect>
+<rect fill="#7B7575" rx="1" opacity="0">
+  <animate attributeName="x" values="675.5;674" dur="3.5s" begin="1.75s" repeatCount="indefinite"/>
+  <animate attributeName="y" values="-25;840" dur="3.5s" begin="1.75s" repeatCount="indefinite"/>
+  <animate attributeName="width" values="1.5;6" dur="3.5s" begin="1.75s" repeatCount="indefinite"/>
+  <animate attributeName="height" values="6;26" dur="3.5s" begin="1.75s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0.5;0.6;0" keyTimes="0;0.1;0.85;1" dur="3.5s" begin="1.75s" repeatCount="indefinite"/>
+</rect>
+<rect fill="#7B7575" rx="1" opacity="0">
+  <animate attributeName="x" values="675.5;674" dur="3.5s" begin="2.625s" repeatCount="indefinite"/>
+  <animate attributeName="y" values="-25;840" dur="3.5s" begin="2.625s" repeatCount="indefinite"/>
+  <animate attributeName="width" values="1.5;6" dur="3.5s" begin="2.625s" repeatCount="indefinite"/>
+  <animate attributeName="height" values="6;26" dur="3.5s" begin="2.625s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="0;0.5;0.6;0" keyTimes="0;0.1;0.85;1" dur="3.5s" begin="2.625s" repeatCount="indefinite"/>
+</rect>
 <line x1="677" y1="834" x2="677" y2="810.982" stroke="#7B7575" stroke-width="2"/>
 <line x1="677" y1="784" x2="677" y2="760.982" stroke="#7B7575" stroke-width="2"/>
 <line x1="677" y1="734" x2="677" y2="713.405" stroke="#7B7575" stroke-width="2"/>
