@@ -534,9 +534,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const ZONE = { x1: 0.36, x2: 0.52, y1: 0.15, y2: 0.85 };
 
     function spikeShape(t) {
-      const attack = 1 - Math.exp(-t * 30);
-      const decay  = Math.exp(-t * 3);
-      return Math.sin(t * Math.PI * 14) * attack * decay;
+      if (t < 0.08) return t / 0.08;
+      if (t < 0.12) return 1.0 - (t - 0.08) / 0.04 * 1.8;
+      if (t < 0.18) return -0.8 + (t - 0.12) / 0.06 * 1.1;
+      if (t < 0.25) return 0.3 * Math.exp(-(t - 0.18) * 25);
+      return 0;
     }
 
     function getSpikeAt(i) {
@@ -552,8 +554,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const arr = [];
       let v = 0;
       for (let i = 0; i < n; i++) {
-        v += (Math.random() - 0.5) * 0.07;
-        v *= 0.85;
+        v += (Math.random() - 0.5) * 0.14;
+        v *= 0.78;
         arr.push(v);
       }
       return arr;
@@ -565,8 +567,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const arr = noise[ci];
       let v = arr.length > 0 ? arr[arr.length - 1] : 0;
       for (let i = 0; i < count; i++) {
-        v += (Math.random() - 0.5) * 0.07;
-        v *= 0.85;
+        v += (Math.random() - 0.5) * 0.14;
+        v *= 0.78;
         arr.push(v);
       }
     }
@@ -677,7 +679,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const di  = offset + (px / chartW) * VISIBLE;
           const n   = nlerp(noise[ci], di);
           const s   = getSpikeAt(di);
-          const val = n * 0.04 + s;
+          const val = n * 0.06 + s;
           const sy  = toY(ch.yC + val);
           const sx  = PAD.left + px;
           px === 0 ? ctx.moveTo(sx, sy) : ctx.lineTo(sx, sy);
