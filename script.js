@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
   counters.forEach(el => counterObserver.observe(el));
 
 
-  /* ── Contact form handler (demo) ── */
+  /* ── Contact form handler ── */
   const form = document.getElementById('contactForm');
   form?.addEventListener('submit', e => {
     e.preventDefault();
@@ -246,16 +246,38 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = 'Sending...';
     btn.disabled = true;
 
-    setTimeout(() => {
-      btn.textContent = 'Sent! We\'ll be in touch.';
-      btn.style.background = '#2e7d32';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(res => {
+      if (res.ok) {
+        btn.textContent = 'Sent! We\'ll be in touch.';
+        btn.style.background = '#2e7d32';
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 4000);
+      } else {
+        btn.textContent = 'Something went wrong. Try again.';
+        btn.style.background = '#c62828';
+        btn.disabled = false;
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.background = '';
+        }, 3000);
+      }
+    }).catch(() => {
+      btn.textContent = 'Network error. Try again.';
+      btn.style.background = '#c62828';
+      btn.disabled = false;
       setTimeout(() => {
         btn.textContent = originalText;
         btn.style.background = '';
-        btn.disabled = false;
-        form.reset();
       }, 3000);
-    }, 1500);
+    });
   });
 
 

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lazarus — AI Monitoring for Real Assets</title>
+  <title>Lazarus — AI-Driven Security for Complex Perimeters</title>
   <meta name="description" content="Lazarus turns your perimeter into an intelligent, early-warning network. AI-powered monitoring for mines, forestry, industrial sites, utilities, and agribusiness.">
-  <meta property="og:title" content="Lazarus — AI Monitoring for Real Assets">
+  <meta property="og:title" content="Lazarus — AI-Driven Security for Complex Perimeters">
   <meta property="og:description" content="Detect intrusions, fires, theft, and safety violations in seconds across mines, forests, industrial sites, and remote infrastructure.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -234,7 +234,7 @@
           <div class="threat__visual ops-accident" id="opsAccident">
             <canvas id="opsCanvas"></canvas>
           </div>
-          <h3 class="threat__title">Operational accidents</h3>
+          <h3 class="threat__title">Equipment failure &amp; accidents</h3>
           <p class="threat__desc">Identify vehicle collisions, structural failures, equipment malfunctions, and hazardous spills in real time across your operations.</p>
         </div>
 
@@ -614,13 +614,14 @@
           <h2 class="cta__title">Ready to secure your assets?</h2>
           <p class="cta__desc">Get in touch with our team to schedule a demo and learn how Lazarus can protect your operations.</p>
         </div>
-        <form class="cta__form" id="contactForm">
+        <form class="cta__form" id="contactForm" action="https://formspree.io/f/contact@lazarussensors.com" method="POST">
           <div class="cta__form-row">
-            <input type="text" class="cta__input" placeholder="Full name" required>
-            <input type="email" class="cta__input" placeholder="Work email" required>
+            <input type="text" name="name" class="cta__input" placeholder="Full name" required>
+            <input type="email" name="email" class="cta__input" placeholder="Work email" required>
           </div>
-          <input type="text" class="cta__input" placeholder="Company">
-          <textarea class="cta__input cta__textarea" placeholder="Tell us about your monitoring needs" rows="4"></textarea>
+          <input type="text" name="company" class="cta__input" placeholder="Company">
+          <textarea name="message" class="cta__input cta__textarea" placeholder="Tell us about your monitoring needs" rows="4"></textarea>
+          <input type="hidden" name="_subject" value="New demo request from lazarussensors.com">
           <button type="submit" class="btn btn--primary btn--full">Request a Demo</button>
         </form>
       </div>
