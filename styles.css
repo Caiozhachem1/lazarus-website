@@ -264,7 +264,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.4) 40%, transparent 65%),
+    linear-gradient(to right, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 35%, rgba(10,10,10,0.2) 55%, transparent 70%),
     linear-gradient(180deg, transparent 0%, transparent 50%, rgba(10,10,10,0.3) 100%),
     url('hero-bg.jpg') center top / cover no-repeat;
 }
@@ -423,6 +423,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   flex-wrap: wrap;
 }
 
+.mobile-br { display: none; }
+
 /* Hero text section — mobile only */
 .hero-mobile-text {
   display: none;
@@ -469,7 +471,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .section__desc {
   font-size: 16px;
   color: var(--c-gray-2);
-  max-width: 560px;
+  max-width: 720px;
   margin-bottom: 48px;
 }
 .section__desc--light { color: rgba(255, 255, 255, 0.65); }
@@ -1306,6 +1308,10 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     padding: 0 0 48px;
   }
 
+  .hero__subtitle {
+    max-width: 380px;
+  }
+
   .features { grid-template-columns: repeat(2, 1fr); }
   .threats { grid-template-columns: 1fr; gap: 12px; }
   .industries { grid-template-columns: repeat(3, 1fr); }
@@ -1387,6 +1393,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   /* Section titles — collapse forced line breaks on mobile */
   .section__title br,
   .hero__title br { display: none; }
+  .mobile-br { display: block; }
 
   .section__title { font-size: clamp(22px, 6vw, 32px); }
   .section__desc { font-size: 14px; }

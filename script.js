@@ -544,7 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const VISIBLE      = 250;
     const SPEED        = 8;
     const INIT_BUF     = 800;
-    const SPIKE_INT    = 180;
+    const SPIKE_INT    = 320;
     const SPIKE_W      = 35;
     const SPIKE_AMP    = 0.20;
 
@@ -553,7 +553,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { label: 'CH2 ACOUSTIC', yC: 0.70, color: '#7B7575', alpha: 0.5 },
     ];
 
-    const ZONE = { x1: 0.36, x2: 0.52, y1: 0.15, y2: 0.85 };
+    const ZONE = { x1: 0.30, x2: 0.58, y1: 0.10, y2: 0.90 };
 
     function spikeShape(t) {
       if (t < 0.08) return t / 0.08;
