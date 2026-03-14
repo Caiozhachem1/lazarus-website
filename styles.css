@@ -1359,10 +1359,20 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .hero__actions .btn { width: 100%; text-align: center; justify-content: center; }
 
   .hero__hud-top,
-  .hero__hud-bottom { padding: 10px 14px; }
-  .hero__hud-label { font-size: 10px; white-space: nowrap; }
-  .hero__hud-meta { font-size: 9px; white-space: nowrap; }
-  .hero__hud-bottom { bottom: 4px; }
+  .hero__hud-bottom {
+    padding: 6px 10px;
+    margin: 0 10px;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    width: auto;
+    left: 0; right: 0;
+  }
+  .hero__hud-top { top: calc(var(--nav-h) + 6px); }
+  .hero__hud-bottom { bottom: 8px; }
+  .hero__hud-label { font-size: 10px; white-space: nowrap; color: rgba(255,255,255,0.85); }
+  .hero__hud-meta { font-size: 9px; white-space: nowrap; color: rgba(255,255,255,0.7); }
 
   .hero__content { display: none; }
   .hero__detection { display: none; }
@@ -1415,8 +1425,6 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .hero { padding-bottom: 36px; }
   .hero__title { font-size: clamp(24px, 7.5vw, 32px); }
 
-  .hero__hud-top,
-  .hero__hud-bottom { padding: 10px 12px; }
   .hero__hud-label { font-size: 9px; overflow: hidden; text-overflow: ellipsis; }
   .hero__hud-meta { font-size: 8px; }
 
