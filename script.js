@@ -701,7 +701,10 @@ document.addEventListener('DOMContentLoaded', () => {
           const di  = offset + (px / chartW) * VISIBLE;
           const n   = nlerp(noise[ci], di);
           const s   = getSpikeAt(di);
-          const val = n * 0.06 + s;
+          /* reduce noise when spike is present so the big wave doesn't look like it's vibrating */
+          const spikeStrength = Math.min(1, Math.abs(s) / (SPIKE_AMP * 0.2));
+          const noiseMix = 1 - spikeStrength * 0.95;
+          const val = n * 0.06 * noiseMix + s;
           const sy  = toY(ch.yC + val);
           const sx  = PAD.left + px;
           px === 0 ? ctx.moveTo(sx, sy) : ctx.lineTo(sx, sy);

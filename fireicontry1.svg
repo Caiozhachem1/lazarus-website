@@ -78,13 +78,13 @@
 </g>
 
 <!-- Callout line from detection box to callout box -->
-<line x1="580" y1="390" x2="640" y2="340" stroke="#842C2C" stroke-width="1"/>
+<line x1="580" y1="390" x2="640" y2="328" stroke="#842C2C" stroke-width="1"/>
 
-<!-- Callout box (matching intrusion size/style) -->
-<rect x="640" y="310" width="388" height="170" rx="4.5" fill="#211717" stroke="#842C2C"/>
-<text x="672" y="362" fill="#A53231" font-family="monospace" font-size="22" font-weight="bold" letter-spacing="3">IGNITION DETECTED</text>
-<text x="672" y="400" fill="#7B7575" font-family="monospace" font-size="19" letter-spacing="1">S 4.406223°, W 64.819081°</text>
-<text x="672" y="435" fill="#7B7575" font-family="monospace" font-size="19" letter-spacing="1">CO 420ppm · TEMP 380°C</text>
+<!-- Callout box (matches perimeter intrusion: 388×156, same style) -->
+<rect x="640" y="312" width="388" height="156" rx="4.5" fill="#211717" stroke="#842C2C"/>
+<text x="672" y="348" fill="#A53231" font-family="monospace" font-size="24" font-weight="bold" letter-spacing="3">IGNITION DETECTED</text>
+<text x="672" y="384" fill="#7B7575" font-family="monospace" font-size="18" letter-spacing="1">S 4.406223°, W 64.819081°</text>
+<text x="672" y="418" fill="#7B7575" font-family="monospace" font-size="18" letter-spacing="1">CO 420 ppm · VOC 1,240 ppb</text>
 
 <!-- Sensor node -->
 <g transform="translate(950, 220)">
