@@ -170,7 +170,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .nav__lang-option {
   display: none;
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 4px);
   left: 0;
   align-items: center;
   gap: 6px;
@@ -179,7 +179,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   font-weight: 500;
   letter-spacing: 1px;
   color: rgba(255,255,255,0.7);
-  padding: 6px 10px;
+  padding: 4px 10px;
   background: rgba(20,20,20,0.95);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 4px;
@@ -187,6 +187,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: color 0.2s, border-color 0.2s;
+  z-index: 100;
+  text-decoration: none;
 }
 
 .nav__lang-picker:hover .nav__lang-option {
@@ -201,8 +203,15 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .nav__flag {
   width: 18px;
   height: 13px;
+  min-width: 18px;
+  max-width: 18px;
+  min-height: 13px;
+  max-height: 13px;
   border-radius: 2px;
   flex-shrink: 0;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .nav__mobile-lang {
