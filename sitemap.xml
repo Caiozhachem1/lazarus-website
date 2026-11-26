@@ -61,6 +61,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://lazarussensors.com/company/"/>
   </url>
   <url>
+    <loc>https://lazarussensors.com/guides/wildfire-detection-brazil/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lazarussensors.com/guides/wildfire-detection-brazil/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lazarussensors.com/pt/guides/wildfire-detection-brazil/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lazarussensors.com/guides/wildfire-detection-brazil/"/>
+  </url>
+  <url>
+    <loc>https://lazarussensors.com/pt/guides/wildfire-detection-brazil/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://lazarussensors.com/guides/wildfire-detection-brazil/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lazarussensors.com/pt/guides/wildfire-detection-brazil/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://lazarussensors.com/guides/wildfire-detection-brazil/"/>
+  </url>
+  <url>
     <loc>https://lazarussensors.com/missions/border-monitoring/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://lazarussensors.com/missions/border-monitoring/"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://lazarussensors.com/pt/missions/border-monitoring/"/>
